@@ -1,9 +1,10 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 'use strict';
 
-var ip = require('..');
+var ip = require('ip');
 var assert = require('assert');
-var net = require('net');
-var os = require('os');
+var describe = require("tape-compat").describe;
+var it = require("tape-compat").it;
 
 describe('IP library for node.js', function() {
   describe('toBuffer()/toString() methods', function() {
@@ -351,6 +352,7 @@ describe('IP library for node.js', function() {
     });
   });
 
+/*
   describe('address() method', function() {
     describe('undefined', function() {
       it('should respond with a private ip', function() {
@@ -390,6 +392,7 @@ describe('IP library for node.js', function() {
       });
     });
   });
+*/
 
   describe('toLong() method', function() {
     it('should respond with a int', function() {
@@ -405,3 +408,5 @@ describe('IP library for node.js', function() {
     });
   })
 });
+
+return module.exports;});
